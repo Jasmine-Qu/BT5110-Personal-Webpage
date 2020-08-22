@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Personal Website</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			
+			header {
+				background-color: #000080;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+				color: white;
+			}
+			
+			nav {
+				float: left;
+				width: 20%;
+				padding: 20px;
+			}
+			
+			nav ul {
+				list-style-type: none;
+				padding: 10px;
+			}
+			
+			nav li a {
+				display: block;
+				color: #000080;
+				text-align: center;
+				padding: 10px;
+				text-decoration: none;
+			}
+			
+			article {
+				float: left;
+				padding: 20px;
+				width: 80%;
+				background-color: #f1f1f1;
+			}
+			
+			section:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			
+			footer {
+				background-color: #777;
+				padding: 10px;
+				text-align: center;
+				color: white;
+				font-size: 10px;
+			}
+			
+			@media (max-width: 600px) {
+				nav, article {
+					width: 100%;
+					height: auto;
+			}
+			}
+			
+			table {
+				width:80%;
+			}
+			table, th, td {
+				border: 0;
+				border-collapse: collapse;
+			}
+			th, td {
+				padding: 10px;
+				text-align: left;
+			}
+			#t01 tr:nth-child(even) {
+				background-color: #eee;
+			}
+			#t01 tr:nth-child(odd) {
+				background-color: #fff;
+			}
+			#t01 th {
+				background-color: #000080;
+				color: white;
+			}
+		</style>
+	</head>
+	
+	<body>	
+		<header>
+		<h2>Mingyu's Personal Webpage</h2>
+		</header>
+	
+		<section>		
+			<nav>
+				<ul>
+					<li><a href="#About">About</a></li>
+					<li><a href="#Education">Education</a></li>
+					<li><a href="#Contact">Contact</a></li>
+				</ul>
+			</nav>
+		
+			<article>
+				<i><h3>Time</h3></i>
+				<i><p>Current time and date is: <div id="time"> </div></p></i>
+			
+				<script>
+					function  getDate(){
+						document.getElementById("time").innerHTML = Date();			
+					}
+				
+					setInterval("getDate();",1000);			
+				</script>
+				<hr>
+				
+				<h1 id="About">About</h1>
+				<p>I am currenly a graduate student at National University Singapore in the Master of Science in Business Anaytics program.</p>
+				<p>My enthusiasm for business analytics was originally ignited during my exchange at Erasmus Universiteit Rotterdam. I collaberated with students from France, Netherlands and Belgium in deeply studying consumer preference of audio speakers in the European market using analytical tools. Since then, I was fascinated by the power of analytics. Now, I held hands-on working experience in the field of analytics with exposure to data warehouse management and marketing. When working at Teradata and eBay, I mastered the use of Python, R, SQL, Tableau in addressing real-world business problems.</p>
+				<p>In my free time, I like to read, cook and play flute. I am also an online writer.</p>
+				
+				<h1 id="Education">Education</h1>
+				<ul>
+					<li>2020 - 2021 &nbsp &nbsp MS in Business Analytics<br> National University of Singapore</li>
+					<li>2016 - 2020 &nbsp &nbsp BA in Economics<br> Shanghai University of Finance and Economics</li>
+		        </ul>
+				
+				<h1 id="Contact">Contact</h1>
+				<table id="t01">
+					<tr>
+						<th>Contact</th>
+						<th>Details</th> 
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td>mingyu.qu@outlook.com</td>
+					</tr>
+					<tr>
+						<td>Phone</td>
+						<td>+86 18321900000</td>
+					</tr>
+					<tr>
+						<td>Skype</td>
+						<td>live:mingyu.qu</td>
+					</tr>
+				</table>
+				<p>Click the smiley face to contact me:</p>
+				<a href="mailto:mingyu.qu@outlook.com">
+					<img src="smiley.jpg" alt="Email Me" style="width:50px;height:50px;">
+				</a>
+			</article>			
+		</section>
+		
+		<footer>
+			<p>Website Assignment for BT5110</p>
+		</footer>
+	
+	</body>
+</html>
